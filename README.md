@@ -42,38 +42,44 @@ Three tables were created:
 ## 🖼  Table Creation & Records (Screenshots)
 
 - Customers table created
-
+**Query:**
+```sql
    CREATE TABLE customers (
     customer_id INT PRIMARY KEY,
     name VARCHAR2(100),
     region VARCHAR2(50)
 );
-
-
+```
 ![Customers Table](https://github.com/sandra2303/plsql-window-functions-uwimbabazi-sandrine/blob/main/screnshoots/customer%20table.PNG)
 
 ---
 
 - Products table created
-
+**Query:**
+```sql
   CREATE TABLE products (
     product_id INT PRIMARY KEY,
     name VARCHAR2(100),
     category VARCHAR2(50)
-); 
+);
+```
+
 ![Products Table](https://github.com/sandra2303/plsql-window-functions-uwimbabazi-sandrine/blob/main/screnshoots/product%20table.PNG)
 
 ---
 
 - Transactions table created
-
+**Query:**
+```sql
   CREATE TABLE transactions (
     transaction_id INT PRIMARY KEY,
     customer_id INT REFERENCES customers(customer_id),
     product_id INT REFERENCES products(product_id),
     sale_date DATE,
     amount NUMBER(10,2)
-); 
+);
+```
+ 
 ![Transactions Table](https://github.com/sandra2303/plsql-window-functions-uwimbabazi-sandrine/blob/main/screnshoots/transaction%20table.PNG)
 
 ---
