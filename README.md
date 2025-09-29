@@ -3,7 +3,7 @@
 ### Student: Uwimbabazi Sandrine  
 ### Course: Database Development with PL/SQL (INSY 8311)  
 ### Instructor: Eric Maniraguha  
-### Submission Date: 21 September 2025  
+### Submission Date: 29 September 2025  
 
 ---
 
@@ -97,7 +97,7 @@ GROUP BY c.customer_id, c.name;
 
 ---
 
-###🔹 Aggregate Functions
+### 🔹 Aggregate Functions
 
 **Query:**
 
@@ -115,7 +115,7 @@ ORDER BY month;
 
 ---
 
-###🔹 Navigation Functions
+### 🔹 Navigation Functions
 
 **Query:**
 
@@ -135,7 +135,7 @@ ORDER BY month;
 
 ---
 
-###🔹 Distribution Functions
+### 🔹 Distribution Functions
 
 **Query:**
 
@@ -152,7 +152,7 @@ GROUP BY c.customer_id, c.name;
 
 ---
 
-###📊  Results Analysis
+### 📊  Results Analysis
 
 Descriptive: Sales peaked in March and April; Coffee Beans and Cooking Oil were best sellers.
 
@@ -162,7 +162,7 @@ Prescriptive: Focus promotions on Huye region, expand inventory for top products
 
 ---
 
-###📖 References
+### 📖 References
 
 1.Oracle Documentation – Analytic (Window) Functions
 
@@ -186,6 +186,6 @@ Prescriptive: Focus promotions on Huye region, expand inventory for top products
 
 ---
 
-###✅ Academic Integrity Statement
+### ✅ Academic Integrity Statement
 
 All sources were properly cited. Implementations and analysis represent original work. No AI-generated content was copied without attribution.
