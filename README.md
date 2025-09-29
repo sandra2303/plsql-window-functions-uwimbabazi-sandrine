@@ -35,9 +35,49 @@ Three tables were created:
 - **Transactions** (`transaction_id`, `customer_id`, `product_id`, `sale_date`, `amount`)  
 
 **ER Diagram:**  
-![ER Diagram](screenshots/ER.png)
+![ER Diagram](https://github.com/sandra2303/plsql-window-functions-uwimbabazi-sandrine/blob/main/screnshoots/ER.PNG)
 
 ---
+
+## 🖼  Table Creation & Records (Screenshots)
+
+- Customers table created
+
+   CREATE TABLE customers (
+    customer_id INT PRIMARY KEY,
+    name VARCHAR2(100),
+    region VARCHAR2(50)
+);
+
+
+![Customers Table](https://github.com/sandra2303/plsql-window-functions-uwimbabazi-sandrine/blob/main/screnshoots/customer%20table.PNG)
+
+---
+
+- Products table created
+
+  CREATE TABLE products (
+    product_id INT PRIMARY KEY,
+    name VARCHAR2(100),
+    category VARCHAR2(50)
+); 
+![Products Table](https://github.com/sandra2303/plsql-window-functions-uwimbabazi-sandrine/blob/main/screnshoots/product%20table.PNG)
+
+---
+
+- Transactions table created
+
+  CREATE TABLE transactions (
+    transaction_id INT PRIMARY KEY,
+    customer_id INT REFERENCES customers(customer_id),
+    product_id INT REFERENCES products(product_id),
+    sale_date DATE,
+    amount NUMBER(10,2)
+); 
+![Transactions Table](https://github.com/sandra2303/plsql-window-functions-uwimbabazi-sandrine/blob/main/screnshoots/transaction%20table.PNG)
+
+---
+
 
 ## 🛠 Window Functions Implemented
 
@@ -111,3 +151,41 @@ GROUP BY c.customer_id, c.name;
 ![Distribution functions](https://github.com/sandra2303/plsql-window-functions-uwimbabazi-sandrine/blob/main/screnshoots/distribution_function.PNG)
 
 ---
+
+###📊  Results Analysis
+
+Descriptive: Sales peaked in March and April; Coffee Beans and Cooking Oil were best sellers.
+
+Diagnostic: Kigali region dominated sales due to frequent high-value transactions; Huye underperformed.
+
+Prescriptive: Focus promotions on Huye region, expand inventory for top products, and launch loyalty programs for top quartile customers.
+
+---
+
+###📖 References
+
+1.Oracle Documentation – Analytic (Window) Functions
+
+2.Oracle Documentation – SQL Language Reference
+
+3.W3Schools – SQL RANK() Function
+
+4.GeeksforGeeks – SQL | Window Functions
+
+5.TutorialsPoint – SQL – Window Functions
+
+6.Mode Analytics – Window Functions Tutorial
+
+7.SQLShack – SQL Window Functions Explained
+
+8.Redgate – Practical SQL Window Functions
+
+9.Hackr.io – SQL Window Functions Guide
+
+10.Towards Data Science – Understanding SQL Window Functions
+
+---
+
+###✅ Academic Integrity Statement
+
+All sources were properly cited. Implementations and analysis represent original work. No AI-generated content was copied without attribution.
